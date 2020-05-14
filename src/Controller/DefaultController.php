@@ -2,18 +2,21 @@
 
 namespace App\Controller;
 
+use App\Repository\ProjectRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="homepage", methods={"GET"})
      */
-    public function index()
+    public function index(ProjectRepository $projectRepository) : Response
     {
         return $this->render('default/index.html.twig', [
-            'controller_name' => 'DefaultController',
+            'projects' => $projectRepository->findAll()
         ]);
     }
 }
+
