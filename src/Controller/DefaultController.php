@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\CategoryRepository;
 use App\Repository\ProjectRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,5 +19,12 @@ class DefaultController extends AbstractController
             'projects' => $projectRepository->findAll()
         ]);
     }
+    public function  show_category(CategoryRepository $categoryRepository) : Response
+    {
+        return  $this->render('default/_listCategory.html.twig',[
+            "categories"=>$categoryRepository->findAll()
+        ]);
+    }
+
 }
 

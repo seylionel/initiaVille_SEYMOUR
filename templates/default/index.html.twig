@@ -2,55 +2,62 @@
 
 {% block title %}Hello DefaultController!{% endblock %}
 
+
 {% block body %}
-    <div class="jumbotron">
-        <h1 class="display-4">InitiaVille</h1>
-        <p class="lead">Proposez des initiatives pour améliorer la vie en ville.</p>
-        <a class="btn btn-primary btn-lg" href="cities.html" role="button">
-            <i class="fa fa-map-marker"></i>
-            Voir les villes
-        </a>
-        <a class="btn btn-primary btn-lg" href="new-project.html" role="button">
-            <i class="fa fa-plus-circle"></i>
-            Proposer un nouveau projet
-        </a>
-    </div>
+    <nav>
+    {% include 'default/_menu.html.twig' %}
+    </nav>
 
-    <h2>Les derniers projets</h2>
+        <div class="jumbotron">
+            <h1 class="display-4">InitiaVille</h1>
+            <p class="lead">Proposez des initiatives pour améliorer la vie en ville.</p>
+            <a class="btn btn-primary btn-lg" href="cities.html" role="button">
+                <i class="fa fa-map-marker"></i>
+                Voir les villes
+            </a>
+            <a class="btn btn-primary btn-lg" href="new-project.html" role="button">
+                <i class="fa fa-plus-circle"></i>
+                Proposer un nouveau projet
+            </a>
+        </div>
 
+        <h2>Les derniers projets</h2>
+
+
+        <div class="row row-cols-1 row-cols-md-3">
     {% for project in projects %}
-    <div class="row row-cols-1 row-cols-md-3">
-        <div class="col mb-4">
-            <div class="card">
-                <img src="{{ asset('uploads/projects/'~ project.picture) }}" class="card-img-top" alt="Boîte à lire">
-                <div class="card-body">
-                    <h5 class="card-title">Boîte à lire</h5>
-                    <p class="card-text">Permettre l'échange de livre entre particuliers.</p>
-                    <a href="project.html" class="btn btn-primary">
-                        <i class="fa fa-eye"></i>
-                        Voir plus
-                    </a>
-                </div>
-                <div class="card-footer">
-                    <span class="badge badge-pill badge-primary" title="Catégorie">
-                        <i class="fa fa-tag"></i>
-                        Loisir
-                    </span>
-                    <span class="badge badge-pill badge-secondary" title="Ville">
-                        <i class="fa fa-map-marker"></i>
-                        Rennes
-                    </span>
-                    <span class="badge badge-pill badge-info" title="Date de proposition">
-                        <i class="fa fa-calendar"></i>
-                        02/05/2020
-                    </span>
-                    <span class="badge badge-pill badge-warning" title="Coût du projet">
-                        <i class="fa fa-euro"></i>
-                        3000
-                    </span>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="{{ asset('uploads/projects/'~ project.picture) }}" class="card-img-top" alt="Boîte à lire">
+                    <div class="card-body">
+                        <h5 class="card-title">Boîte à lire</h5>
+                        <p class="card-text">Permettre l'échange de livre entre particuliers.</p>
+                        <a href="project.html" class="btn btn-primary">
+                            <i class="fa fa-eye"></i>
+                            Voir plus
+                        </a>
+                    </div>
+                    <div class="card-footer">
+                        <span class="badge badge-pill badge-primary" title="Catégorie">
+                            <i class="fa fa-tag"></i>
+                            Loisir
+                        </span>
+                        <span class="badge badge-pill badge-secondary" title="Ville">
+                            <i class="fa fa-map-marker"></i>
+                            Rennes
+                        </span>
+                        <span class="badge badge-pill badge-info" title="Date de proposition">
+                            <i class="fa fa-calendar"></i>
+                            02/05/2020
+                        </span>
+                        <span class="badge badge-pill badge-warning" title="Coût du projet">
+                            <i class="fa fa-euro"></i>
+                            3000
+                        </span>
+                    </div>
                 </div>
             </div>
+    {% endfor %}
         </div>
-    </div>
-{% endfor %}
+
 {% endblock %}
