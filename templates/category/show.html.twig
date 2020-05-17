@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Category{% endblock %}
+
+{% block body %}
+    <h1>Category</h1>
+
+    <h2>Projet de la catégorie "{{ category.label }}"</h2>
+
+    <div class="row row-cols-1 row-cols-md-3">
+        {% for project in category.projects  %}
+            {{ include('default/_card.html.twig') }}
+        {% endfor %}
+
+
+
+
+
+    {{ include('category/_delete_form.html.twig') }}
+{% endblock %}
