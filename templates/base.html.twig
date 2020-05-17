@@ -13,8 +13,9 @@
     </head>
 
 
+    {{ render(controller('App\\Controller\\DefaultController::show_menu')) }}
+    <main class="main-content container">
 
-    <main class="main-content container"
         {% block body %}{% endblock %}
     </main>
 

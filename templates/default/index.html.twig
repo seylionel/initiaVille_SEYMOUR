@@ -4,9 +4,7 @@
 
 
 {% block body %}
-    <nav>
-    {% include 'default/_menu.html.twig' %}
-    </nav>
+
 
         <div class="jumbotron">
             <h1 class="display-4">InitiaVille</h1>
@@ -26,37 +24,7 @@
 
         <div class="row row-cols-1 row-cols-md-3">
     {% for project in projects %}
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="{{ asset('uploads/projects/'~ project.picture) }}" class="card-img-top" alt="Boîte à lire">
-                    <div class="card-body">
-                        <h5 class="card-title">Boîte à lire</h5>
-                        <p class="card-text">Permettre l'échange de livre entre particuliers.</p>
-                        <a href="project.html" class="btn btn-primary">
-                            <i class="fa fa-eye"></i>
-                            Voir plus
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                        <span class="badge badge-pill badge-primary" title="Catégorie">
-                            <i class="fa fa-tag"></i>
-                            Loisir
-                        </span>
-                        <span class="badge badge-pill badge-secondary" title="Ville">
-                            <i class="fa fa-map-marker"></i>
-                            Rennes
-                        </span>
-                        <span class="badge badge-pill badge-info" title="Date de proposition">
-                            <i class="fa fa-calendar"></i>
-                            02/05/2020
-                        </span>
-                        <span class="badge badge-pill badge-warning" title="Coût du projet">
-                            <i class="fa fa-euro"></i>
-                            3000
-                        </span>
-                    </div>
-                </div>
-            </div>
+        {{ include('default/_card.html.twig') }}
     {% endfor %}
         </div>
 

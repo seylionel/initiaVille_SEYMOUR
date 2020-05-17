@@ -26,5 +26,11 @@ class DefaultController extends AbstractController
         ]);
     }
 
+    public function show_menu(CategoryRepository $categoryRepository) : Response
+    {
+        return $this->render('default/_menu.html.twig',[
+            "categories"=>$categoryRepository->findAll()
+        ]);
+    }
 }
 
