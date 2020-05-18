@@ -7,15 +7,15 @@ npm install
 npm run build
 ```
 
-## TODO
 
-- [ ] Afficher sur la page d'accueil la liste des 3 derniers projets proposés
-- [ ] Afficher dans le menu principal la liste des catégories
-- [ ] Pouvoir cliquer sur une catégorie pour afficher ensuite la liste des projets d'une catégorie
-- [ ] Pouvoir cliquer sur le menu "Les Villes" pour afficher la liste des villes
-- [ ] Pouvoir cliquer sur une ville pour afficher la liste des projets dans la ville (affichage similaire à la page d'une catégorie)
-- [ ] Ajouter un formulaire de création de compte accessible dans le menu principal lorsque l'internaute n'est pas connecté
-- [ ] Ajouter un formulaire de login accessible dans le menu principal lorsque l'internaute n'est pas connecté
+
+- [x] Afficher sur la page d'accueil la liste des 3 derniers projets proposés
+- [x] Afficher dans le menu principal la liste des catégories
+- [x] Pouvoir cliquer sur une catégorie pour afficher ensuite la liste des projets d'une catégorie
+- [x] Pouvoir cliquer sur le menu "Les Villes" pour afficher la liste des villes
+- [x] Pouvoir cliquer sur une ville pour afficher la liste des projets dans la ville (affichage similaire à la page d'une catégorie)
+- [x] Ajouter un formulaire de création de compte accessible dans le menu principal lorsque l'internaute n'est pas connecté
+- [x] Ajouter un formulaire de login accessible dans le menu principal lorsque l'internaute n'est pas connecté
 - [ ] Afficher sur la page d'accueil un bouton pour proposer un nouveau projet (uniquement visible si l'utilisateur est connecté)
 - [ ] Créer la page de profile d'un internaute (uniquement visible si l'utilisateur est connecté)
 - [ ] Pouvoir modifier ses informations de profile
