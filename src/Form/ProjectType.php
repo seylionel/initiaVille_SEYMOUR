@@ -18,8 +18,9 @@ class ProjectType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('picture',FileType::class,[
-                'mapped'=>false,
+
+            ->add('pictureFile', FileType::class, [
+                'mapped' => false
             ])
             ->add('cost', MoneyType::class,[
                 "label"=>"Prix :"])
@@ -41,12 +42,6 @@ class ProjectType extends AbstractType
                     ])
 
 
-            ->add('picture', FileType::class, [
-                'mapped' => false,
-                'attr' => [
-                    'placeholder' => 'Files...'
-                    ]
-                ])
         ;
     }
 
