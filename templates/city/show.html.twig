@@ -11,9 +11,6 @@
         {% endfor %}
     </div>
 
-    <a href="{{ path('city_index') }}">back to list</a>
-
-    <a href="{{ path('city_edit', {'id': city.id}) }}">edit</a>
 
     {{ include('city/_delete_form.html.twig') }}
 {% endblock %}

@@ -1,9 +1,9 @@
 <div class="col mb-4">
     <div class="card">
-        <img src="{{ asset('uploads/projects/'~ project.picture) }}" class="card-img-top" alt="Boîte à lire">
+        <img src="{{ asset('uploads/projects/'~ project.picture) }}" class="card-img-top" alt="{{project.title}}">
         <div class="card-body">
             <h5 class="card-title">{{ project.title }}</h5>
-            <p class="card-text">{{ project.excerpt }}</p>
+            <p class="card-text">{{ project.description }}</p>
             <a href="#" class="btn btn-primary">
                 <i class="fa fa-eye"></i>
                 Voir plus

@@ -21,5 +21,5 @@ npm run build
 - [x] Pouvoir modifier ses informations de profile
 - [x] Afficher la liste des projets de l'utilisateur connecté sur sa page de profile
 - [ ] Pouvoir modifier / supprimer les projets dans la liste des projets de l'utilisateur (attention à la sécurité sur cette fonctionnalité !)
-- [ ] Pouvoir ajouter un nouveau projet dans la base de données
-- [ ] L'administrateur du site aura également accès à une interface d'administration très basique lui permettant de gérer facilement la liste des villes et des catégories et de pouvoir supprimer des comptes utilisateurs ou bien des projets
+- [x] Pouvoir ajouter un nouveau projet dans la base de données
+- [x] L'administrateur du site aura également accès à une interface d'administration très basique lui permettant de gérer facilement la liste des villes et des catégories et de pouvoir supprimer des comptes utilisateurs ou bien des projets
